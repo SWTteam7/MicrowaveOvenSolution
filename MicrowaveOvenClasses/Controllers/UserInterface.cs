@@ -29,6 +29,7 @@ namespace MicrowaveOvenClasses.Controllers
             ILight light,
             ICookController cooker)
         {
+
             powerButton.Pressed += new EventHandler(OnPowerPressed);
             timeButton.Pressed += new EventHandler(OnTimePressed);
             startCancelButton.Pressed += new EventHandler(OnStartCancelPressed);
@@ -85,7 +86,7 @@ namespace MicrowaveOvenClasses.Controllers
                 case States.SETTIME:
                     myDisplay.Clear();
                     myLight.TurnOn();
-                    myCooker.StartCooking(powerLevel, time*60);
+                    myCooker.StartCooking(powerLevel, time); //*60
                     myState = States.COOKING;
                     break;
                 case States.COOKING:

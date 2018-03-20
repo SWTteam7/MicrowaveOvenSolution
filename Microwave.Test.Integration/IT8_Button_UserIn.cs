@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Microwave.Test.Integration
 {
-    public class Class1
-    {
-    }
+   class IT8_Button_UserIn
+   {
+   }
 }
