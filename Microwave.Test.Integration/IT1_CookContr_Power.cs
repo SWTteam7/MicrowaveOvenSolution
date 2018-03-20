@@ -14,7 +14,7 @@ using Timer = MicrowaveOvenClasses.Boundary.Timer;
 
 namespace Microwave.Test.Integration
 {
-   [TestFixture]
+   [TestFixture] //FÆRDIG
    class IT1_CookContr_Power
    {
       private ITimer _timer;
@@ -77,7 +77,7 @@ namespace Microwave.Test.Integration
 
 
       [Test]
-      public void OnTimerExpired_turnoff_output()
+      public void OnTimerExpired_turnOff_output()
       {
          _uut.StartCooking(50,1);
 

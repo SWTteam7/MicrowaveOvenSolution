@@ -59,11 +59,11 @@
     <Compile Include="IT3_CookContr_Timer.cs" />
     <Compile Include="IT1_CookContr_Power.cs" />
     <Compile Include="IT2_CookContr_Display.cs" />
-    <Compile Include="IT4_UserIn_CookContr.cs" />
-    <Compile Include="IT5_UserIn_Display.cs" />
-    <Compile Include="IT6_UserIn_Light.cs" />
-    <Compile Include="IT7_Door_UserIn.cs" />
-    <Compile Include="IT8_Button_UserIn.cs" />
+    <Compile Include="IT6_UserIn_CookContr.cs" />
+    <Compile Include="IT7_UserIn_Display.cs" />
+    <Compile Include="IT8_UserIn_Light.cs" />
+    <Compile Include="IT4_Door_UserIn.cs" />
+    <Compile Include="IT5_Button_UserIn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -13,7 +13,8 @@ using Timer = MicrowaveOvenClasses.Boundary.Timer;
 
 namespace Microwave.Test.Integration
 {
-   class IT4_UserIn_CookContr
+   [TestFixture] //FÆRDIG
+   class IT6_UserIn_CookContr
    {
       private ITimer _timer;
       private CookController _cookController;
@@ -45,7 +46,7 @@ namespace Microwave.Test.Integration
       }
 
       [Test]
-      public void OnStartCancelPressed()
+      public void OnStartCancelPressed_onePress_correctOutput()
       {
          _door.Open();
          _door.Close();

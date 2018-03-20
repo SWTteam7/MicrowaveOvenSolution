@@ -13,8 +13,8 @@ using Timer = MicrowaveOvenClasses.Boundary.Timer;
 
 namespace Microwave.Test.Integration
 {
-   [TestFixture]
-    public class IT3_CookContr_Timer
+   [TestFixture] //FÆRDIG
+    class IT3_CookContr_Timer
     {
       private ITimer _timer;
        private CookController _uut;
@@ -33,7 +33,7 @@ namespace Microwave.Test.Integration
        }
 
       [Test]
-       public void StartCooking_Start()
+       public void StartCooking_start_correctOutput()
        {
          _uut.StartCooking(50, 2);
 
@@ -44,7 +44,7 @@ namespace Microwave.Test.Integration
       }
 
        [Test]
-       public void StopCooking_Stop()
+       public void StopCooking_stop_correctOutput()
        {
          _uut.StartCooking(50,10);
 

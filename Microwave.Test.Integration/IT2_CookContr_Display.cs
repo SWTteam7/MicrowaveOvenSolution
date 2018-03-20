@@ -14,7 +14,7 @@ using Timer = MicrowaveOvenClasses.Boundary.Timer;
 
 namespace Microwave.Test.Integration
 {
-   [TestFixture]
+   [TestFixture] //FÆRDIG
    class IT2_CookContr_Display
    {
       private ITimer _timer;
@@ -34,7 +34,7 @@ namespace Microwave.Test.Integration
       }
 
       [Test]
-      public void OnTimerTick_showtime()
+      public void OnTimerTick_showTime_correctOutput()
       {
          _uut.StartCooking(50,2);
 
