@@ -39,7 +39,7 @@ namespace TestApplication
             // Wait while the classes, including the timer, do their job
             //System.Console.WriteLine("Tast enter når applikationen skal afsluttes");
             System.Console.ReadLine();
-         // test kommentar
+         
         }
     }
 }
