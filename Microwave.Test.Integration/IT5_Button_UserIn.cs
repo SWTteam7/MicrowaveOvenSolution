@@ -12,7 +12,7 @@ using NUnit.Framework;
 
 namespace Microwave.Test.Integration
 {
-   [TestFixture] //FÆRDIG - TROR VI NOK
+   [TestFixture] 
    class IT5_Button_UserIn
    {
         private IOutput _output;
@@ -52,6 +52,58 @@ namespace Microwave.Test.Integration
         }
 
         [Test]
+        public void Press_twoPressOnPower_correctOutput()
+        {
+            _buttonpower.Press();
+            _buttonpower.Press();
+
+            _display.Received(1).ShowPower(100);
+        }
+
+        [Test]
+        public void Press_fourteenPressOnPower_correctOutput()
+        {
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+
+            _display.Received(1).ShowPower(700);
+        }
+
+        [Test]
+        public void Press_fifteenPressOnPower_correctOutput()
+        {
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+            _buttonpower.Press();
+
+            _display.Received().ShowPower(50);
+        }
+
+        [Test]
         public void Press_onePressOnTime_correctOutput()
         {
             _buttonpower.Press();
@@ -61,15 +113,24 @@ namespace Microwave.Test.Integration
         }
 
         [Test]
+        public void Press_twoPressOnTime_correctOutput()
+        {
+            _buttonpower.Press();
+            _buttontime.Press();
+            _buttontime.Press();
+
+            _display.Received(1).ShowTime(02, 00);
+        }
+
+        [Test]
         public void Press_pressOnStartCancel_correctOutput()
         {
             _buttonpower.Press();
             _buttontime.Press();
-            //_buttonstartcan.Press();
-            //Thread.Sleep(1050);
+            _buttonstartcan.Press();
+            Thread.Sleep(1050);
             _buttonstartcan.Press();
 
-            //_output.Received().OutputLine(Arg.Is<string>(str => str.Contains("00:59")));
             _display.Received().Clear();
         }
     }

@@ -11,7 +11,7 @@ using NUnit.Framework;
 
 namespace Microwave.Test.Integration
 {
-   [TestFixture] //FÆRDIG - TROR VI NOK
+   [TestFixture] 
    class IT4_Door_UserIn
    {
         private IOutput _output;

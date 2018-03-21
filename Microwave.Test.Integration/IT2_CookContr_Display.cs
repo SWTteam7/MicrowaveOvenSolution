@@ -14,7 +14,7 @@ using Timer = MicrowaveOvenClasses.Boundary.Timer;
 
 namespace Microwave.Test.Integration
 {
-   [TestFixture] //FÆRDIG
+   [TestFixture] 
    class IT2_CookContr_Display
    {
       private ITimer _timer;

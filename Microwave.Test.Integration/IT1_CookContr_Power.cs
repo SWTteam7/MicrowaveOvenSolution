@@ -14,7 +14,7 @@ using Timer = MicrowaveOvenClasses.Boundary.Timer;
 
 namespace Microwave.Test.Integration
 {
-   [TestFixture] //FÆRDIG
+   [TestFixture] 
    class IT1_CookContr_Power
    {
       private ITimer _timer;
@@ -38,7 +38,7 @@ namespace Microwave.Test.Integration
       {
          _uut.StartCooking(50,100);
 
-         _output.Received().OutputLine(Arg.Is<string>(str => str.Contains("50 %")));
+         _output.Received().OutputLine(Arg.Is<string>(str => str.Contains("50 W")));
       }
 
       [Test]
@@ -50,10 +50,10 @@ namespace Microwave.Test.Integration
       }
 
       [Test]
-      public void StartCooking_101_exception()
+      public void StartCooking_701_exception()
       {
 
-         Assert.Throws<ArgumentOutOfRangeException>(() => _uut.StartCooking(101, 100));
+         Assert.Throws<ArgumentOutOfRangeException>(() => _uut.StartCooking(701, 100));
 
       }
 
